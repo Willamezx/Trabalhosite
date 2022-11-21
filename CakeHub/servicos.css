@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.root{
+    --orange: #FF6400;
+    --white:#fff;
+    --dark:#1e1c2a;
+}
+
+
+.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: black;
+    transition: all 0.5s;
+}
+.navegacao .logo{
+    color: #FF6400;
+    font-size: 1.7rem;
+    font-size: 600;
+}
+.logo span{
+    color: #1e1c2a;
+}
+.navegacao ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navegacao ul li a{
+    color: #FF6400;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navegacao ul li a:hover{
+    color: orange;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #1e1c2a;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #FF6400;
+}
+
+@media (max-width:785px){
+    .navegation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display:block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right:-100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #fff;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 11;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+}
+
+.backgroundservico{ 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(img/backgroundservico.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+
+.abs-site-link {
+  position: fixed;
+  z-index: 11;
+  bottom: 20px;
+  left: 20px;
+  color: #FF6400;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 3px solid currentColor;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.abs-profiles {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 23px;
+  opacity: .8;
+}
+
+.abs-profiles img {
+  filter: hue-rotate(71deg) brightness(1.1);
+}
+
+.abs-profiles a {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+#back_rodape {
+  height: 100px;
+  width: 100%;
+  background-size: 100%;
+  background: black;
+  display: flex;
+  color: white;
+  height: 21.3vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tamanho_estacio{
+  height: 100px;
+  width: 350px;
+  padding-top: 2vh;
+}
+
+#tam_map{
+  height: 60px;
+  width: 500px;
+  padding-top: 2vh;
+}
+
+.text-blk{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  line-height:25px;
+}
+
+.responsive-cell-block{
+  min-height:75px;
+}
+
+.responsive-container-block{
+  min-height:75px;
+  height:fit-content;
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:0px;
+  margin-right:auto;
+  margin-bottom:0px;
+  margin-left:auto;
+  justify-content:space-evenly;
+}
+
+.inner-container{
+  max-width:1320px;
+  flex-direction:column;
+  align-items:center;
+  margin-top:50px;
+  margin-right:auto;
+  margin-bottom:50px;
+  margin-left:auto;
+}
+
+.section-head-text{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:5px;
+  margin-left:0px;
+  font-size:35px;
+  font-weight:700;
+  line-height:48px;
+  color: #FF6400;
+  margin:0 0 10px 0;
+}
+
+.img-wrapper{
+  width:100%;
+}
+
+.team-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.name{
+  font-size:23px;
+  font-weight:700;
+  color: #FF6400;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:5px;
+  margin-left:0px;
+  text-align: center;
+}
+
+.position{
+  font-size:25px;
+  font-weight:700;
+  color: #FF6400;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:50px;
+  margin-left:0px;
+}
+
+.team-img{
+  width:100%;
+  height:100%;
+}
+
+.team-card-container{
+  width:32vh;
+  margin:0 0 40px 0;
+  
+}
+
+@media (max-width: 500px){
+  .outer-container{
+    padding:10px 20px 10px 20px;
+  }
+  .section-head-text{
+    text-align:center;
+  }
+} 
+
+.titulo2{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  line-height:25px;
+  font-size:35px;
+  font-weight:700;
+  color: #FF6400;
+  margin:0 0 10px 0;
+}
+
+.titulo3{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left: 15px;
+  line-height:25px;
+  font-size:35px;
+  font-weight:700;
+  color: #FF6400;
+  text-align: center;
+}
+
+
+.abs-site-link {
+  position: fixed;
+  z-index: 11;
+  bottom: 20px;
+  left: 20px;
+  color: #FF6400;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 3px solid currentColor;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.abs-profiles {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 23px;
+  opacity: .8;
+}
+
+.abs-profiles img {
+  filter: hue-rotate(71deg) brightness(1.1);
+}
+
+.abs-profiles a {
+  display: inline-block;
+  margin-left: 6px;
+}

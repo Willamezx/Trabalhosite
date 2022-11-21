@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.root{
+    --orange: #FF6400;
+    --white:#fff;
+    --dark:#1e1c2a;
+}
+
+
+.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: black;
+    transition: all 0.5s;
+}
+.navegacao .logo{
+    color: #FF6400;
+    font-size: 1.7rem;
+    font-size: 600;
+}
+.logo span{
+    color: #1e1c2a;
+}
+.navegacao ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navegacao ul li a{
+    color: #FF6400;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navegacao ul li a:hover{
+    color: orange;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #1e1c2a;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #FF6400;
+}
+
+@media (max-width:785px){
+    .navegation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display:block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right:-100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #fff;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 11;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+}
+
+.bodylogin {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 70vh;
+	margin: 0px 0;
+}
+
+.cad_body{
+    width: 205.3vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, red , yellow);
+}
+
+.container{
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+.form-image{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.form-image img{
+    width: 70%;   
+}
+
+.form{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(img/login2.jpg);
+    padding: 2rem ;
+}
+.form-header{
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #FF6400;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: none;
+    background-color: #FF6400;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover{
+    background-color: #FF6400;
+}
+
+.login-button button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after{
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #FF6400;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+    
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.input-box input {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #FF6400;
+    height: 5vh;
+    width: 25vh;
+}
+
+input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #FF6400;
+}
+.input-box label,
+.gender-title h3{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:#FF6400;
+}
+
+.input-box input::placeholder{
+    color:#FF6400;
+}
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+    padding: 0 0 .2rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #FF6400;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.3 rem;
+    border: none;
+    background-color: #FF6400;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover{
+    background-color: #FF6400;
+}
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px){
+    .form-image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1064px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .gender-inputs{
+        margin-top: 2rem;
+    }
+    .gender-group{
+        flex-direction: column;
+    }
+    .gender-input{
+        margin-top: 0.5rem;
+
+    }
+}
+
+#back_rodape {
+  --;
+  width: 100%;
+  background-size: 100%;
+  background: black;
+  display: flex;
+  color: white;
+  height: 21.3vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tamanho_estacio{
+  height: 100px;
+  width: 350px;
+  padding-top: 2vh;
+}
+
+#tam_map{
+  height: 60px;
+  width: 500px;
+  padding-top: 2vh;
+}
+
+.abs-site-link {
+  position: fixed;
+  z-index: 11;
+  bottom: 20px;
+  left: 20px;
+  color: #FF6400;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 3px solid currentColor;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.abs-profiles {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 23px;
+  opacity: .8;
+}
+
+.abs-profiles img {
+  filter: hue-rotate(71deg) brightness(1.1);
+}
+
+.abs-profiles a {
+  display: inline-block;
+  margin-left: 6px;
+}
